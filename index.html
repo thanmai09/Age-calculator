@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe6e9; /* Light pink background */
+            color: black;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #fff0f5; /* Soft pink container */
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 60%;
+            max-width: 700px;
+        }
+        input, button {
+            padding: 15px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        input {
+            background-color: #ffcce0;
+            color: black;
+        }
+        button {
+            background-color: #ff80ab;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff4081;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Age Calculator</h2>
+        <form method="POST">
+            <label for="birth_date">Enter your birth date:</label>
+            <input type="date" id="birth_date" name="birth_date" required>
+            <br>
+            <button type="submit">Calculate Age</button>
+        </form>
+        {% if age is not none %}
+            <h3>Hyy Sweet Heart! Your age is {{ age }} Years...</h3>
+        {% endif %}
+    </div>
+</body>
+</html>
